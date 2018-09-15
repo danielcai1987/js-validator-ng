@@ -1,0 +1,25 @@
+textarea{
+    height: 50vh;
+}
+.result{
+    padding:10px;
+    background: #fff;
+    height: 50vh;
+    h2{
+        color:#01DF01
+    }
+}
+ul{
+    padding-left: 0;
+    li{
+        list-style: none;
+        span{
+            padding:5px;
+        }
+    }
+}
+
+.err{
+    color:#FE2E2E;
+    
+}
