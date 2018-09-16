@@ -1,15 +1,15 @@
 <div nz-row>
-  <div nz-col nzSpan="12">
-    <textarea row="4"  (keyup)="onInput()" nz-input [(ngModel)]="content"></textarea>
+  <div nz-col nzSm="12" nzXs="24">
+    <textarea row="4"  (keyup)="onInput()" nz-input [(ngModel)]="content" placeholder="Enter some javascript code here..."></textarea>
   </div>
-  <div nz-col nzSpan="12" class="result">
+  <div nz-col nzSm="12" class="result" nzXs="24">
     <ng-container *ngIf="content!='' && content!=undefined; else isEmpty">
         <ng-container *ngIf="valid; else showError">
-          <h2>Javascript is Valid.</h2>
+          <h3 class='valid'>Result: Javascript is Valid.</h3>
         </ng-container>
         <ng-template #showError>
           <div *ngIf="errors!=undefined">
-            <h3>Result ({{errors.length}} error{{errors.length==1?'':'s'}} found)</h3>
+            <h3 class='error'>Result: ({{errors.length}} error{{errors.length==1?'':'s'}} found)</h3>
             <nz-table #basicTable [nzData]="errors" [nzShowPagination]="false">
               <thead>
                 <tr>
@@ -36,8 +36,8 @@
   </div>
 </div>
 <div nz-row>
-    <div nz-col nzSpan="24">
-        <button nz-button nzType="primary" (click)="tryInput('valid')">Valid</button>
+    <div nz-col nzSpan="24" class="buttons">
+        <button nz-button nzType="primary" (click)="tryInput('valid')">Valid JS</button>
         <button nz-button nzType="default" (click)="tryInput('oneerror')">With 1 error</button>
         <button nz-button nzType="danger" (click)="tryInput('moreerror')">More than 1 error</button>
         <button nz-button nzType="default" (click)="tryInput('clear')">Clear</button>

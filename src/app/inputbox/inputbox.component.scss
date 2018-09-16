@@ -1,12 +1,17 @@
 textarea{
-    height: 50vh;
+    height: 70vh;
 }
 .result{
     padding:10px;
     background: #fff;
-    height: 50vh;
-    h2{
-        color:#01DF01
+    height: 70vh;
+    h3{
+        &.valid{
+            color:#01DF01
+        }
+        &.error{
+            color:#FE2E2E;
+        }
     }
 }
 ul{
@@ -21,5 +26,10 @@ ul{
 
 .err{
     color:#FE2E2E;
-    
+}
+.buttons{
+    padding:10px;
+    button{
+        margin-right: 10px;
+    }
 }
