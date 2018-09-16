@@ -19,7 +19,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let error of errors;let i = index">
+                <tr *ngFor="let error of errors;let i = index+1">
                   <td>{{i}}</td>
                   <td>{{error.evidence}}</td>
                   <td>{{error.reason}}</td>
